@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="scripts/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <a href="http://www.nerdsindenial.band/"><img id="logo" src="img/logo.png"/></a>
@@ -17,7 +18,7 @@
   </div>
   <br/>
   <h3>Your Crew For This Flight:</h3>
-  <img id="thedudes" src="img/thedudes2.jpg"/>
+  <img id="thedudes" src="img/thedudes.jpg"/>
   <br/>
   <br/>
   <h3>Hear Our Latest EPs:</h3>
@@ -30,9 +31,11 @@
   <a href="https://mimosasatnoon.hearnow.com/" title="It's Gone Too Far - HearNow" target="_blank">
     <img class="links" src="img/hearnow-ep3.jpg"/>
   </a>
-  <img class="links" src="img/hearnow-ep4-comingsoon.jpg" />
+  <a href="https://distrokid.com/hyperfollow/nerdsindenial/out-of-the-countryinto-the-castle" title="Out of the Country / Into the Castle - DistroKid" target="_blank">
+    <img class="links" src="img/distro-ep4.jpg"/>
+  </a>
   <br/>
-  <p><b>Out of the Country / Into the Castle EP releasing NOVEMBER 20TH</b></p>
+  <p><b>FIFTH .BARS EP ARRIVING SOON</b></p>
   <br/>
   <h3>More Wiggly Air Links:</h3>
   <a href="https://open.spotify.com/artist/3qzxKc1LTEfbAJL99BHfmx" title="Spotify" target="_blank">
@@ -71,84 +74,42 @@
   <br/>
   <br/>
   <h3>More content coming soon.&#8482;</h3>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.BARS</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars?</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars!</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>.bars</p>
-  <p>......bars</p>
   <br/>
+  <ul id="bars">
+  </ul>
+  <script>
+  $(document).ready(function() {
+
+    var bars = [
+      ".bars",
+      ".BARS",
+      ".......bars",
+      ".bars?",
+      ".bars!",
+      ".baaars",
+      ".BARS?",
+      ".BARS!",
+      ".BAAAAAAAARS"
+    ];
+
+    var scrollCount = 0;
+
+    $(window).scroll(function () {
+        // End of the document reached?
+        if ($(document).height() - $(this).height() == $(this).scrollTop()) {
+          let text = "";
+          if (scrollCount > 0 && scrollCount % 30 == 0) {
+            text = "havin' fun scrollin' there, bud? :)";
+          } else {
+            text = bars[Math.floor(Math.random() * bars.length)];
+          }
+          $("#bars").append($("<li>").html(text));
+          scrollCount++;
+        }
+    }); 
+
+  });
+  </script>
 </body>
-<footer><i>&#169; Nerds in Denial 2021. Email us: nerdsindenial at gmail</i></footer>
+<footer><i>&#169; Nerds in Denial 2022. Email us: nerdsindenial at gmail</i></footer>
 </html>
