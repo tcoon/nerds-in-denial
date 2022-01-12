@@ -82,6 +82,16 @@ hr {
   overflow: hidden;
 }
 
+.eps {
+  border: 3px solid #00ff00;
+  border-radius: 5px;
+  background-color:  black;
+  width: 185px;
+  height: 185px;
+  display: inline-block;
+  overflow: hidden;
+}
+
 .dudetext {
   opacity: 0;
   text-align: left;
@@ -95,11 +105,26 @@ hr {
   transition: all 0.1s ease-in-out 0s;
 }
 
+.eps:hover, .eps:active
+{
+  border: 3px solid #ff0000;
+  transform: scale(1.5);
+  transition: all 0.1s ease-in-out 0s;
+}
+
 .thedudes:hover > .dudetext {
   opacity: 1;
 }
 
 .thedudes:active > .dudetext {
+  opacity: 1;
+}
+
+.eps:hover > .dudetext {
+  opacity: 1;
+}
+
+.eps:active > .dudetext {
   opacity: 1;
 }
 
@@ -161,6 +186,45 @@ li {
   background: url("img/dashuandim.jpg") no-repeat;
 }
 
+#ep1 {
+  background: url("img/ep1.jpg") no-repeat;
+}
+
+#ep1:hover, #ep1:active {
+  background: url("img/ep1dim.jpg") no-repeat;
+}
+
+#ep2 {
+  background: url("img/ep2.jpg") no-repeat;
+}
+
+#ep2:hover, #ep2:active {
+  background: url("img/ep2dim.jpg") no-repeat;
+}
+
+#ep3 {
+  background: url("img/ep3.jpg") no-repeat;
+}
+
+#ep3:hover, #ep3:active {
+  background: url("img/ep3dim.jpg") no-repeat;
+}
+
+#ep4 {
+  background: url("img/ep4.jpg") no-repeat;
+}
+
+#ep4:hover, #ep4:active {
+  background: url("img/ep4dim.jpg") no-repeat;
+}
+
+#ep5:hover > #ep5text, #ep5:active > #ep5text {
+  background-image: linear-gradient(to left, #c8a2c8,
+    #4b0082, #c8a2c8, #4b0082, #c8a2c8, #4b0082, #c8a2c8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .smol {
   font-size: 0.75em;
   margin-top: 0;
@@ -168,4 +232,32 @@ li {
 
 .name {
   margin-bottom: 0;
+}
+
+.row {
+  margin-left: 3em;
+  margin-right: 3em;
+  padding-bottom: 2em;
+}
+
+#ep5text {
+  word-break: break-all;
+  background-image: linear-gradient(to left, #4b0082,
+    #c8a2c8, #4b0082, #c8a2c8, #4b0082, #c8a2c8, #4b0082);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+a {
+  color: #00ff00;
+}
+
+a:hover {
+  color:  #55ff55;
+  font-size: 1.05em;
+}
+
+.ad {
+  max-width: 90%;
+  width: 600px;
 }
