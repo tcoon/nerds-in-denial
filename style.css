@@ -248,11 +248,11 @@ li {
   color: transparent;
 }
 
-a {
+.musiclink {
   color: #00ff00;
 }
 
-a:hover {
+.musiclink:hover {
   color:  #55ff55;
   font-size: 1.05em;
 }
