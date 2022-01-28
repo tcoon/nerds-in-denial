@@ -112,19 +112,19 @@ hr {
   transition: all 0.1s ease-in-out 0s;
 }
 
-.thedudes:hover > .dudetext {
+.thedudes:hover .dudetext {
   opacity: 1;
 }
 
-.thedudes:active > .dudetext {
+.thedudes:active .dudetext {
   opacity: 1;
 }
 
-.eps:hover > .dudetext {
+.eps:hover .dudetext {
   opacity: 1;
 }
 
-.eps:active > .dudetext {
+.eps:active .dudetext {
   opacity: 1;
 }
 
@@ -218,7 +218,7 @@ li {
   background: url("img/ep4dim.jpg") no-repeat;
 }
 
-#ep5:hover > #ep5text, #ep5:active > #ep5text {
+#ep5:hover #ep5text, #ep5:active #ep5text {
   background-image: linear-gradient(to left, #c8a2c8,
     #4b0082, #c8a2c8, #4b0082, #c8a2c8, #4b0082, #c8a2c8);
   -webkit-background-clip: text;
@@ -260,4 +260,69 @@ li {
 .ad {
   max-width: 90%;
   width: 600px;
+}
+
+.wanted {
+  max-width: 90%;
+  width: 350px;
+}
+
+.dimmer {
+  background-color:  black;
+  width: 100%
+  height: 180px;
+  opacity: 1%;
+}
+
+.headlinesWrapper {
+  border: 1px solid white;
+  width: 600px;
+  max-width: 85%;
+  background-color: rgb(30, 30, 30);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headlinesWrapper h3 {
+  padding-top: 0.5em;
+  padding-bottom: 0;
+  display: block;
+  text-align: left;
+  padding-left: 1.5em;
+  margin-bottom: 0;
+}
+
+.headline {
+  text-align: left;
+  padding-top: 0.125em;
+  background-color: rgb(50, 50, 50);
+}
+
+.headline h5 {
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.headline p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 0.8em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid white;
+}
+
+#headlineRefresh {
+  background-color: gray;
+  color: white;
+  padding: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8em;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
 }
