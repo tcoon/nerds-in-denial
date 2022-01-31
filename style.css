@@ -275,7 +275,8 @@ li {
 }
 
 .headlinesWrapper {
-  border: 1px solid white;
+  border-radius: 7px;
+  border: 7px solid rgb(90, 90, 90);
   width: 600px;
   max-width: 85%;
   background-color: rgb(30, 30, 30);
@@ -296,6 +297,11 @@ li {
   text-align: left;
   padding-top: 0.125em;
   background-color: rgb(50, 50, 50);
+  border-top: 1px solid white;
+}
+
+.headline:hover {
+  background-color: rgb(40, 40, 40);
 }
 
 .headline h5 {
@@ -312,7 +318,7 @@ li {
   padding-right: 2em;
   font-size: 0.8em;
   padding-bottom: 1em;
-  border-bottom: 1px solid white;
+  font-style: italic;
 }
 
 #headlineRefresh {
@@ -321,8 +327,46 @@ li {
   padding: 0.25em;
   text-align: center;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.75em;
   cursor: pointer;
   display: block;
   margin-left: auto;
+  font-family: yeet, Verdana, Arial, Tahoma, Serif;
+}
+
+#nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: gray;
+  z-index: 9001;
+  opacity: 75%;
+}
+
+#nav a {
+
+}
+
+#nav p {
+  padding-left: 1em;
+  padding-right: 1em;
+  border: 1px solid white;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+#nav p:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+#nav p:active {
+  background-color: red;
+}
+
+.location {
+  display: none;
 }
