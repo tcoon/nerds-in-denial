@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nerds in Denial</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+</head>
+<!--
+ ________   _______   ________  ________  ________          
+|\   ___  \|\  ___ \ |\   __  \|\   ___ \|\   ____\         
+\ \  \\ \  \ \   __/|\ \  \|\  \ \  \_|\ \ \  \___|_        
+ \ \  \\ \  \ \  \_|/_\ \   _  _\ \  \ \\ \ \_____  \       
+  \ \  \\ \  \ \  \_|\ \ \  \\  \\ \  \_\\ \|____|\  \      
+   \ \__\\ \__\ \_______\ \__\\ _\\ \_______\____\_\  \     
+    \|__| \|__|\|_______|\|__|\|__|\|_______|\_________\    
+                                            \|_________|    
+
+ ___  ________                                              
+|\  \|\   ___  \                                            
+\ \  \ \  \\ \  \                                           
+ \ \  \ \  \\ \  \                                          
+  \ \  \ \  \\ \  \                                         
+   \ \__\ \__\\ \__\                                        
+    \|__|\|__| \|__|                                        
+
+ ________  _______   ________   ___  ________  ___          
+|\   ___ \|\  ___ \ |\   ___  \|\  \|\   __  \|\  \         
+\ \  \_|\ \ \   __/|\ \  \\ \  \ \  \ \  \|\  \ \  \        
+ \ \  \ \\ \ \  \_|/_\ \  \\ \  \ \  \ \   __  \ \  \       
+  \ \  \_\\ \ \  \_|\ \ \  \\ \  \ \  \ \  \ \  \ \  \____  
+   \ \_______\ \_______\ \__\\ \__\ \__\ \__\ \__\ \_______\
+    \|_______|\|_______|\|__| \|__|\|__|\|__|\|__|\|_______|
+
+
+Site sloppily thrown together by Tim (the keyboardist)
+If you're looking at this, you're a frickin nerd!
+-->
+<body>
+  <div id="nav">
+    <a id="navigationBtn"><p><b>Menu&nbsp;&#9660;</b></p></a>
+    <a class="location" href="./index.html"><p>Main Site</p></a>
+    <a class="location" href="./index.html#crew"><p>Band Members</p></a>
+    <a class="location" href="./index.html#ep"><p>Latest Releases</p></a>
+    <a class="location" href="./index.html#music"><p>More Music</p></a>
+    <a class="location" href="./index.html#social"><p>Social</p></a>
+  </div>
+  <a href="./index.html"><img id="logo" src="img/logo.png"/></a> <!-- todo - load in album art here -->
+  <div class="row">
+    <h2 id="title"></h2>
+    <hr/>
+    <h3 id="siteHeader">Buy/Stream Here:</h3>
+    <hr/>
+    <h3 id="musicHeader">Listen to some snippets below:</h3>
+  </div>
+  <script>
+
+    // shamelessly stolen from https://www.learningjquery.com/2012/06/get-url-parameters-using-jquery
+    const getUrlParameter = function (sParam) {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam) {
+                return sParameterName[1];
+            }
+        }
+    }
+
+    // in retrospect, this could be simplified but im too lazy
+    const links = {
+      ep1: {
+        'sites': {
+          'spotify': 'https://open.spotify.com/album/79zRZhxLOc5C6UpdMKmhIF',
+          'apple': 'https://music.apple.com/us/album/its-gone-too-far-ep/1574069920',
+          'bandcamp': 'https://nerdsindenial.bandcamp.com/album/its-gone-too-far-ep',
+          'amazon': 'https://www.amazon.com/dp/B0981JG1JB',
+          'pandora': 'https://www.pandora.com/artist/nerds-in-denial/its-gone-too-far-explicit/ALdKz4tmlqXd5fP',
+          'deezer': 'https://deezer.page.link/ZRjPptBpoSi8mU3Q9',
+          'youtube': 'https://www.youtube.com/playlist?list=OLAK5uy_k7EPh2dvcy-tM8P22iPbvTwasXWMco-Pc'
+        }
+      },
+      ep2: {
+        'sites': {
+          'spotify': 'https://open.spotify.com/album/7pw1STaMgLuFdYWzvwzMKQ',
+          'apple': 'https://music.apple.com/us/album/a-sunset-serenade-ep/1579793695',
+          'bandcamp': '',  // todo
+          'amazon': 'https://www.amazon.com/dp/B09BXRMHD5',
+          'pandora': 'https://www.pandora.com/artist/nerds-in-denial/a-sunset-serenade-explicit/AL9jdxgV5m4pcjc',
+          'deezer': 'https://deezer.page.link/3DaPEpeHKF2sHDiUA',
+          'youtube': 'https://www.youtube.com/playlist?list=OLAK5uy_kA-qZxJt7KrIquCWTcxoDlOnd_o06QR80'
+        }
+      },
+      ep3: {
+        'sites': {
+          'spotify': 'https://open.spotify.com/album/4GeoI4nUuOs41GqZt667Zw',
+          'apple': 'https://music.apple.com/us/album/mimosas-at-noon-ep/1586294108',
+          'bandcamp': '',  // todo
+          'amazon': 'https://www.amazon.com/dp/B09GJN9BRF',
+          'pandora': 'https://www.pandora.com/artist/nerds-in-denial/mimosas-at-noon-explicit/ALnlv7fkqx2pjc9',
+          'deezer': 'https://deezer.page.link/sSf7MGTtMYWcHLY98',
+          'youtube': 'https://www.youtube.com/playlist?list=OLAK5uy_nGSvTSNlR3cSV6C9AtGhNSG9o6EOViI5c'
+        }
+      },
+      ep4: {
+        'sites': {
+          'spotify': 'https://open.spotify.com/album/0vN4X7ifohdFwSM6v3khTc',
+          'apple': 'https://music.apple.com/us/album/out-of-the-country-into-the-castle-ep/1595461531',
+          'bandcamp': 'https://nerdsindenial.bandcamp.com/album/out-of-the-country-into-the-castle-ep',
+          'amazon': 'https://www.amazon.com/dp/B09LTBHXNN',
+          'pandora': 'https://www.pandora.com/artist/nerds-in-denial/out-of-the-country-into-the-castle-explicit/ALJtzvvbtlJ9t4g',
+          'deezer': 'https://deezer.page.link/mENyWzQ2GkBNETZq6',
+          'youtube': 'https://www.youtube.com/playlist?list=OLAK5uy_nEHhAqcpNRGEiWBoBF7irHRg00fYhULkQ'
+        }
+      },
+      ep5: {
+        'sites': {
+          'spotify': '',
+          'apple': '',
+          'bandcamp': '',
+          'amazon': '',
+          'pandora': '',
+          'deezer': '',
+          'youtube': ''
+        }
+      },
+      bars: {
+        'sites': {
+          'spotify': '',
+          'apple': '',
+          'bandcamp': '',
+          'amazon': '',
+          'pandora': '',
+          'deezer': '',
+          'youtube': ''
+        }
+      },
+      take2: {
+        'sites': {
+          'spotify': 'https://open.spotify.com/album/2FbOWZ5RqMrT0bjOgBeB14',
+          'apple': 'https://music.apple.com/us/album/take-two/1136455755',
+          'bandcamp': 'https://nerdsindenial.bandcamp.com/album/take-two',
+          'amazon': 'https://www.amazon.com/dp/B01ISW49QM',
+          'pandora': '',  // N/A
+          'deezer': 'https://deezer.page.link/NKhnicEHMw5dMaMy5',
+          'youtube': 'https://www.youtube.com/playlist?list=OLAK5uy_mq0LzrDaLo_uhvFmGbcIck9SgrBZBPF1Q'
+        }
+      },
+      oldies: {
+        'sites': {
+          'bandcamp1': 'https://nerdsindenial.bandcamp.com/track/drug-money-2',
+          'bandcamp2': 'https://nerdsindenial.bandcamp.com/track/five-days-time-2'
+        }
+      }
+    }
+
+    const addSite = function (site, link) {
+      if (!link || link == '') {
+        return;
+      }
+
+      let href = link;
+      let title;
+      let src;
+
+      switch (site) {
+        case "spotify":
+          title = 'Spotify';
+          src = 'img/spotify.png';
+          break;
+        case "apple":
+          title = 'iTunes';
+          src = 'img/applemusic.png';
+          break;
+        case "bandcamp":
+          title = 'Bandcamp';
+          src = 'img/bandcamp.png';
+          break;
+        case "amazon":
+          title = 'Amazon Music';
+          src = 'img/amazonmusic.png';
+          break;
+        case "pandora":
+          title = 'Pandora';
+          src = 'img/pandora.png';
+          break;
+        case "deezer":
+          title = 'Deezer';
+          src = 'img/deezer.png';
+          break;
+        case "youtube":
+          title = 'YouTube';
+          src = 'img/youtube.png';
+          break;
+        default:
+          break; 
+      }
+
+      $('#siteHeader').after('\
+          <a href="' + href + '" title="' + title + '" target="_blank" rel=”noopener noreferrer”>\
+            <img class="links" src="' + src + '"/>\
+          </a>'
+      );
+    }
+
+    const addAllSites = function (currRelease) {
+      addSite('youtube', links[currRelease]['sites']['youtube']);
+      addSite('deezer', links[currRelease]['sites']['deezer']);
+      addSite('pandora', links[currRelease]['sites']['pandora']);
+      addSite('amazon', links[currRelease]['sites']['amazon']);
+      addSite('bandcamp', links[currRelease]['sites']['bandcamp']);
+      addSite('apple', links[currRelease]['sites']['apple']);
+      addSite('spotify', links[currRelease]['sites']['spotify']);
+    }
+
+    const addMusic = function (title, file) {
+      $('#musicHeader').after('\
+        <p class="musicTitle"> ' + title + '</p>\
+        <audio src="' + file + '" controls/>\
+      ');
+    }
+
+    $(document).ready(() => {
+      var nav = false;
+      var currRelease = getUrlParameter('release');
+
+      switch(currRelease) {
+        case "ep1":
+          $('#title').html("It's Gone Too Far (EP) - 2021");
+          addAllSites(currRelease);
+          addMusic('Wasted', 'music/ep1/wasted.mp3');
+          addMusic('Don\'t Step On That Crack', 'music/ep1/crack.mp3');
+          addMusic('Mezzothelionus', 'music/ep1/mezzo.mp3');
+          addMusic('Gringo Meets His Maker', 'music/ep1/gringo.mp3');
+          addMusic('It\'s Gone Too Far (Single Version)', 'music/ep1/toofar.mp3');
+          break;
+        case "ep2":
+          $('#title').html("A Sunset Serenade (EP) - 2021");
+          addAllSites(currRelease);
+          addMusic('Above & Below: The Continuing Tale of Frankie Tinniman', 'music/ep1/abovebelow.mp3');
+          addMusic('Colored Pastels', 'music/ep2/pastels.mp3');
+          addMusic('Sizmo Co.', 'music/ep1/sizmo.mp3');
+          addMusic('Bonnie the Butcher', 'music/ep2/bonnie.mp3');
+          addMusic('A Sunset Serenade', 'music/ep2/sunset.mp3');
+          break;
+        case "ep3":
+          $('#title').html("Mimosas at Noon (EP) - 2021");
+          addAllSites(currRelease);
+          addMusic('Garden of Seven Leaves', 'music/ep3/garden.mp3');
+          addMusic('New Girl in the Room', 'music/ep3/newgirl.mp3');
+          addMusic('Country Road Car Insurance', 'music/ep3/countryroad.mp3');
+          addMusic('Red Ringlets', 'music/ep3/ringlets.mp3');
+          addMusic('Mimosas at Noon', 'music/ep3/mimosas.mp3');
+          break;
+        case "ep4":
+          $('#title').html("Out of the Country / Into the Castle (EP) - 2021");
+          addAllSites(currRelease);
+          addMusic('Sammy, Are You In There?', 'music/ep4/sammy.mp3');  
+          addMusic('GENESIS & BEYOND', 'music/ep4/GENBEY.mp3');
+          addMusic('Ode to the Lost Ones', 'music/ep4/ode.mp3');
+          addMusic('Bachman\'s Dock Disks', 'music/ep4/bachman.mp3');
+          addMusic('genesis and beyond', 'music/ep4/genesisbeyond.mp3');
+          addMusic('Out of the Country / Into the Castle', 'music/ep4/otcitc.mp3');
+          break;
+        case "ep5":
+          $('#title').html("Felicata Ishbul (EP) - 2022");
+          $('#siteHeader').after('\
+            <p>Coming soon...</p>'
+          );
+          $('#musicHeader').after('\
+            <p>Coming soon...</p>'
+          );
+          break;
+        case "bars":
+          $('#title').html(".bars - 2022");
+          $('#siteHeader').after('\
+            <p>Coming soon...</p>'
+          );
+          $('#musicHeader').after('\
+            <p>Coming soon...</p>'
+          );
+          break;
+          break;
+        case "take2":
+          $('#title').html("Take Two - 2016");
+          addAllSites(currRelease);
+          break;
+        case "oldies":
+          $('#title').html("The Real Old Stuff...");
+          addSite('bandcamp', links[currRelease]['sites']['bandcamp1']);  // todo - add custom image
+          addSite('bandcamp', links[currRelease]['sites']['bandcamp2']);  // ditto
+          addMusic('Drug Money - 2014', 'music/oldies/drugs.mp3');
+          addMusic('Five Days\' Time - 2015', 'music/oldies/five.mp3');
+          break;
+        default:
+          $('#title').html("Stop messing with the url!");
+          break;
+      }
+
+      $('#navigationBtn').click(() => {
+        nav = !nav;
+        if (nav) {
+          // expand
+          $('#navigationBtn').css("background-color", "black");
+          $('.location').show();
+
+          $('#navigationBtn').empty();
+          $('#navigationBtn').append('<p><b>Menu&nbsp;&#9650;</b></p>');
+        } else {
+          // collapse
+          $('#navigationBtn').css("background-color", "gray");
+          $('.location').hide();
+
+          $('#navigationBtn').empty();
+          $('#navigationBtn').append('<p><b>Menu&nbsp;&#9660;</b></p>');
+        }
+      });
+    });
+
+
+  </script>
+</body>
+</html>

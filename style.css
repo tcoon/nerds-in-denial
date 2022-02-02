@@ -63,10 +63,6 @@ body {
   }
 }
 
-hr {
-  width: 50%;
-}
-
 #marquees {
   width:  100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -217,6 +213,23 @@ li {
 #ep4:hover, #ep4:active {
   background: url("img/ep4dim.jpg") no-repeat;
 }
+
+#take2 {
+  background: url("img/take2.jpg") no-repeat;
+}
+
+#take2:hover, #take2:active {
+  background: url("img/take2dim.jpg") no-repeat;
+}
+
+#oldies {
+  background: url("img/oldies.jpg") no-repeat;
+}
+
+#oldies:hover, #oldies:active {
+  background: url("img/oldiesdim.jpg") no-repeat;
+}
+
 
 #ep5:hover #ep5text, #ep5:active #ep5text {
   background-image: linear-gradient(to left, #c8a2c8,
@@ -369,4 +382,21 @@ li {
 
 .location {
   display: none;
+}
+
+audio {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+.musicTitle {
+  font-size: 0.85em;
+  margin-bottom: 2px;
+}
+
+hr {
+  color: white;
+  width: 50%;
 }
