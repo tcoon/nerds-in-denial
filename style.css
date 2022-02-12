@@ -22,13 +22,26 @@ body {
 #logo {
   padding-top: 1em;
   animation:  pulse 2s infinite ease-in-out;
-  width: 300px;
+  width: 250px;
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
 
+#logoSmol {
+  padding-top: 1em;
+  animation:  pulse 2s infinite ease-in-out;
+  width: 150px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #tagline {
+  animation: float 5s infinite ease-in-out;
+}
+
+#title {
   animation: float 5s infinite ease-in-out;
 }
 
@@ -53,13 +66,13 @@ body {
 
 @keyframes float {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
   }
   50% {
-    transform: translateY(10%);
+    transform: translateY(5%);
   }
   100% {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
   }
 }
 
@@ -389,6 +402,7 @@ audio {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
+  max-width: 100%;
 }
 
 .musicTitle {
