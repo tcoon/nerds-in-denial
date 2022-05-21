@@ -78,7 +78,7 @@ body {
 }
 
 #newrelease h3 {
-  animation:  pulse 0.5s infinite ease-in-out;
+  animation:  pulse 0.75s infinite ease-in-out;
   color: yellow;
 }
 

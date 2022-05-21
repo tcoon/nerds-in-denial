@@ -371,7 +371,7 @@ If you're looking at this, you're a frickin nerd!
               $(audio).prev().css('font-weight', 'normal');
               $(audio).prev().css('font-size', '0.85em');
               audio.pause();
-              $(audio).prev().html(title.substring(2, title.length-3));
+              $(audio).prev().html(title.replace(/🎵|&nbsp; |&nbsp;| &nbsp;\./g,''));
             }
           });
 
