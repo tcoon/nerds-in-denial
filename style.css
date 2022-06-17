@@ -26,7 +26,7 @@ body {
 #bandbio p {
   font-size: 0.85em;
   padding: 2.5em;
-  text-align: justify;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
