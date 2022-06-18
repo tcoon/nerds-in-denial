@@ -37,6 +37,10 @@ body {
   #bandbio {
     width: 80%;
   }
+
+  #tagline {
+    font-size: 24px;
+  }
 }
 
 #logo {
