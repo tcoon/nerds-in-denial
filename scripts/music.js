@@ -111,39 +111,39 @@ const addSite = function (site, link) {
   switch (site) {
     case "spotify":
       title = 'Spotify';
-      src = 'img/spotify.png';
+      src = 'img/spotify.webp';
       break;
     case "apple":
       title = 'iTunes';
-      src = 'img/applemusic.png';
+      src = 'img/applemusic.webp';
       break;
     case "bandcamp":
       title = 'Bandcamp';
-      src = 'img/bandcamp.png';
+      src = 'img/bandcamp.webp';
       break;
     case "amazon":
       title = 'Amazon Music';
-      src = 'img/amazonmusic.png';
+      src = 'img/amazonmusic.webp';
       break;
     case "pandora":
       title = 'Pandora';
-      src = 'img/pandora.png';
+      src = 'img/pandora.webp';
       break;
     case "deezer":
       title = 'Deezer';
-      src = 'img/deezer.png';
+      src = 'img/deezer.webp';
       break;
     case "youtube":
       title = 'YouTube';
-      src = 'img/youtube.png';
+      src = 'img/youtube.webp';
       break;
     case "bandcampDrugMoney":
       title = 'Bandcamp';
-      src = 'img/drugmoney.jpg'
+      src = 'img/drugmoney.webp'
       break;
     case "bandcampFiveDaysTime":
       title = 'Bandcamp';
-      src = 'img/fivedaystime.jpg'
+      src = 'img/fivedaystime.webp'
       break;
     default:
       break; 
@@ -184,7 +184,7 @@ $(document).ready(() => {
   switch(currRelease) {
     case "ep1":
       $('#title').html(".bars EP #1 - It's Gone Too Far (2021)");
-      $('#logoSmol').attr('src', 'img/ep1.jpg');
+      $('#logoSmol').attr('src', 'img/ep1.webp');
       addAllSites(currRelease);
       addMusic('Wasted', 'music/ep1/wasted.mp3');
       addMusic('Don\'t Step On That Crack', 'music/ep1/crack.mp3');
@@ -194,7 +194,7 @@ $(document).ready(() => {
       break;
     case "ep2":
       $('#title').html(".bars EP #2 - A Sunset Serenade (2021)");
-      $('#logoSmol').attr('src', 'img/ep2.jpg');
+      $('#logoSmol').attr('src', 'img/ep2.webp');
       addAllSites(currRelease);
       addMusic('Above & Below: The Continuing Tale of Frankie Tinniman', 'music/ep2/abovebelow.mp3');
       addMusic('Colored Pastels', 'music/ep2/pastels.mp3');
@@ -204,7 +204,7 @@ $(document).ready(() => {
       break;
     case "ep3":
       $('#title').html(".bars EP #3 - Mimosas at Noon (2021)");
-      $('#logoSmol').attr('src', 'img/ep3.jpg');
+      $('#logoSmol').attr('src', 'img/ep3.webp');
       addAllSites(currRelease);
       addMusic('Garden of Seven Leaves', 'music/ep3/garden.mp3');
       addMusic('New Girl in the Room', 'music/ep3/newgirl.mp3');
@@ -213,7 +213,7 @@ $(document).ready(() => {
       addMusic('Mimosas at Noon', 'music/ep3/mimosas.mp3', true);
       break;
     case "ep4":
-    $('#logoSmol').attr('src', 'img/ep4.jpg');
+    $('#logoSmol').attr('src', 'img/ep4.webp');
       $('#title').html(".bars EP #4 - Out of the Country / Into the Castle (2021)");
       addAllSites(currRelease);
       addMusic('Sammy, Are You In There?', 'music/ep4/sammy.mp3');  
@@ -224,7 +224,7 @@ $(document).ready(() => {
       addMusic('Out of the Country / Into the Castle', 'music/ep4/otcitc.mp3', true);
       break;
     case "ep5":
-      //$('#logoSmol').attr('src', 'img/ep5.jpg');
+      //$('#logoSmol').attr('src', 'img/ep5.webp');
       $('#title').html(".bars EP #5 - Felicata Ishbul (2022)");
       $('#siteHeader').after('\
         <p>Coming soon...</p>'
@@ -244,7 +244,7 @@ $(document).ready(() => {
       break;
       break;
     case "take2":
-    $('#logoSmol').attr('src', 'img/take2.jpg');
+    $('#logoSmol').attr('src', 'img/take2.webp');
       $('#title').html("Take Two (2016)");
       addAllSites(currRelease);
       addMusic('Till Next Time', 'music/take2/nexttime.mp3');
@@ -258,7 +258,7 @@ $(document).ready(() => {
       addMusic('Interlude', 'music/take2/interlude.mp3');
       break;
     case "oldies":
-    $('#logoSmol').attr('src', 'img/oldies.jpg');
+    $('#logoSmol').attr('src', 'img/oldies.webp');
       $('#title').html("The Real Old Stuff...");
       addSite('bandcampDrugMoney', links[currRelease]['sites']['bandcamp1']);
       addSite('bandcampFiveDaysTime', links[currRelease]['sites']['bandcamp2']);

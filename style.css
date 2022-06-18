@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-image: url("img/background_blur_2.webp");
+  background-image: url("img/background_blur.webp");
   background-repeat: repeat-y;
   background-size:  100%;
   color: lightgray;
@@ -27,20 +27,6 @@ body {
   font-size: 0.85em;
   padding: 2.5em;
   text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-image: url("img/background_blur_2_mobile.webp");
-  }
-
-  #bandbio {
-    width: 80%;
-  }
-
-  #tagline {
-    font-size: 24px;
-  }
 }
 
 #logo {
@@ -194,99 +180,99 @@ li {
 }
 
 #tim {
-  background: url("img/tim.jpg") no-repeat;
+  background: url("img/tim.webp") no-repeat;
 }
 
 #tim:hover, #tim:active {
-  background: url("img/timdim.jpg") no-repeat;
+  background: url("img/timdim.webp") no-repeat;
 }
 
 #devo {
-  background: url("img/devo.jpg") no-repeat;
+  background: url("img/devo.webp") no-repeat;
 }
 
 #devo:hover, #devo:active {
-  background: url("img/devodim.jpg") no-repeat;
+  background: url("img/devodim.webp") no-repeat;
 }
 
 #ben {
-  background: url("img/ben.jpg") no-repeat;
+  background: url("img/ben.webp") no-repeat;
 }
 
 #ben:hover, #ben:active {
-  background: url("img/bendim.jpg") no-repeat;
+  background: url("img/bendim.webp") no-repeat;
 }
 
 #richie {
-  background: url("img/richie.jpg") no-repeat;
+  background: url("img/richie.webp") no-repeat;
 }
 
 #richie:hover, #richie:active {
-  background: url("img/richiedim.jpg") no-repeat;
+  background: url("img/richiedim.webp") no-repeat;
 }
 
 #dashuan {
-  background: url("img/dashuan.jpg") no-repeat;
+  background: url("img/dashuan.webp") no-repeat;
 }
 
 #dashuan:hover, #dashuan:active {
-  background: url("img/dashuandim.jpg") no-repeat;
+  background: url("img/dashuandim.webp") no-repeat;
 }
 
 #ep1 {
-  background: url("img/ep1.jpg") no-repeat;
+  background: url("img/ep1.webp") no-repeat;
 }
 
 #ep1:hover, #ep1:active {
-  background: url("img/ep1dim.jpg") no-repeat;
+  background: url("img/ep1dim.webp") no-repeat;
 }
 
 #ep2 {
-  background: url("img/ep2.jpg") no-repeat;
+  background: url("img/ep2.webp") no-repeat;
 }
 
 #ep2:hover, #ep2:active {
-  background: url("img/ep2dim.jpg") no-repeat;
+  background: url("img/ep2dim.webp") no-repeat;
 }
 
 #ep3 {
-  background: url("img/ep3.jpg") no-repeat;
+  background: url("img/ep3.webp") no-repeat;
 }
 
 #ep3:hover, #ep3:active {
-  background: url("img/ep3dim.jpg") no-repeat;
+  background: url("img/ep3dim.webp") no-repeat;
 }
 
 #lilacfestmix {
-  background: url("img/lilacfestmix.jpg") no-repeat;
+  background: url("img/lilacfestmix.webp") no-repeat;
 }
 
 #lilacfestmix:hover, #lilacfestmix:active {
-  background: url("img/lilacfestmixdim.jpg") no-repeat;
+  background: url("img/lilacfestmixdim.webp") no-repeat;
 }
 
 #ep4 {
-  background: url("img/ep4.jpg") no-repeat;
+  background: url("img/ep4.webp") no-repeat;
 }
 
 #ep4:hover, #ep4:active {
-  background: url("img/ep4dim.jpg") no-repeat;
+  background: url("img/ep4dim.webp") no-repeat;
 }
 
 #take2 {
-  background: url("img/take2.jpg") no-repeat;
+  background: url("img/take2.webp") no-repeat;
 }
 
 #take2:hover, #take2:active {
-  background: url("img/take2dim.jpg") no-repeat;
+  background: url("img/take2dim.webp") no-repeat;
 }
 
 #oldies {
-  background: url("img/oldies.jpg") no-repeat;
+  background: url("img/oldies.webp") no-repeat;
 }
 
 #oldies:hover, #oldies:active {
-  background: url("img/oldiesdim.jpg") no-repeat;
+  background: url("img/oldiesdim.webp") no-repeat;
 }
 
 
@@ -331,7 +317,7 @@ li {
 
 .ad {
   max-width: 90%;
-  width: 600px;
+  width: 500px;
 }
 
 .wanted {
@@ -465,4 +451,29 @@ hr {
   background-color: black;
   border: 5px solid black;
   border-radius: 5px;
+}
+
+.adcontainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("img/background_blur_mobile.webp");
+  }
+
+  #bandbio {
+    width: 80%;
+  }
+
+  #tagline {
+    font-size: 24px;
+  }
+
+  .adcontainer {
+    width: 100%;
+  }
 }
