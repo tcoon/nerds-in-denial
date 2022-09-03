@@ -60,13 +60,7 @@ const links = {
   },
   ep5: {
     'sites': {
-      'spotify': '',
-      'apple': '',
-      'bandcamp': '',
-      'amazon': '',
-      'pandora': '',
-      'deezer': '',
-      'youtube': ''
+      'distrokid': 'https://distrokid.com/hyperfollow/nerdsindenial/felicata-ishbul'
     }
   },
   bars: {
@@ -144,6 +138,10 @@ const addSite = function (site, link) {
     case "bandcampFiveDaysTime":
       title = 'Bandcamp';
       src = 'img/fivedaystime.webp'
+      break;
+    case "distrokid":
+      title = 'DistroKid';
+      src = 'img/distrokid.webp'
       break;
     default:
       break; 
@@ -224,14 +222,14 @@ $(document).ready(() => {
       addMusic('Out of the Country / Into the Castle', 'music/ep4/otcitc.mp3', true);
       break;
     case "ep5":
-      //$('#logoSmol').attr('src', 'img/ep5.webp');
+      $('#logoSmol').attr('src', 'img/ep5.webp');
       $('#title').html(".bars EP #5 - Felicata Ishbul (2022)");
-      $('#siteHeader').after('\
-        <p>Coming soon...</p>'
-      );
-      $('#musicHeader').after('\
-        <p>Coming soon...</p>'
-      );
+      addSite('distrokid', links[currRelease]['sites']['distrokid']);
+      addMusic('La Fille', 'music/ep5/fille.mp3', true);
+      addMusic('Good Honey Wine', 'music/ep5/ghw.mp3');
+      addMusic('Kolsch', 'music/ep5/kolsch.mp3');
+      addMusic('Summertime in the Flower City', 'music/ep5/summertime.mp3');
+      addMusic('Felicata Ishbul', 'music/ep5/felicata.mp3');
       break;
     case "bars":
       $('#title').html(".bars (2022)");
