@@ -255,6 +255,14 @@ li {
   background: url("img/lilacfestmixdim.webp") no-repeat;
 }
 
+#ep5 {
+  background: url("img/ep5.webp") no-repeat;
+}
+
+#ep5:hover, #ep5:active {
+  background: url("img/ep5dim.webp") no-repeat;
+}
+
 #ep4 {
   background: url("img/ep4.webp") no-repeat;
 }
