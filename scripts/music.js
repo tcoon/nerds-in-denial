@@ -60,7 +60,14 @@ const links = {
   },
   ep5: {
     'sites': {
-      'distrokid': 'https://distrokid.com/hyperfollow/nerdsindenial/felicata-ishbul'
+      'distrokid': 'https://distrokid.com/hyperfollow/nerdsindenial/felicata-ishbul',
+      'spotify': 'https://open.spotify.com/album/5zj8xkRnBsiKI73zyG52qd?si=2c838c11ce3b4c69',
+      'apple': 'https://music.apple.com/us/album/felicata-ishbul-ep/1643091675',
+      'bandcamp': 'https://nerdsindenial.bandcamp.com/album/felicata-ishbul-ep',
+      'amazon': 'https://www.amazon.com/music/player/albums/B0BCVFGFML',
+      'pandora': 'https://www.pandora.com/artist/nerds-in-denial/felicata-ishbul/AL9j4n9k2KxKnrq',
+      'deezer': 'https://www.deezer.com/us/album/352745857',
+      'youtube': 'https://www.youtube.com/playlist?list=OLAK5uy_m6OPNkt9l3ZrTgdvinTxfgYQwIlOjyr2o'
     }
   },
   bars: {
@@ -224,6 +231,7 @@ $(document).ready(() => {
     case "ep5":
       $('#logoSmol').attr('src', 'img/ep5.webp');
       $('#title').html(".bars EP #5 - Felicata Ishbul (2022)");
+      addAllSites(currRelease);
       addSite('distrokid', links[currRelease]['sites']['distrokid']);
       addMusic('La Fille', 'music/ep5/fille.mp3', true);
       addMusic('Good Honey Wine', 'music/ep5/ghw.mp3');
