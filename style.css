@@ -58,7 +58,7 @@ body {
   animation: float 5s infinite ease-in-out;
 }
 
-.links:hover, .links:active
+.links:hover, .links:active, .links:focus
 {
     cursor: pointer;
     transform: scale(1.1);
@@ -135,14 +135,14 @@ body {
   padding-left: 10px;
 }
 
-.thedudes:hover, .thedudes:active
+.thedudes:hover, .thedudes:active, .thedudes:focus
 {
   border: 3px solid #ff0000;
   transform: scale(1.5);
   transition: all 0.1s ease-in-out 0s;
 }
 
-.eps:hover, .eps:active
+.eps:hover, .eps:active, .eps:focus
 {
   border: 3px solid #ff0000;
   transform: scale(1.5);
@@ -157,11 +157,19 @@ body {
   opacity: 1;
 }
 
+.thedudes:focus .dudetext {
+  opacity: 1;
+}
+
 .eps:hover .dudetext {
   opacity: 1;
 }
 
 .eps:active .dudetext {
+  opacity: 1;
+}
+
+.eps:focus .dudetext {
   opacity: 1;
 }
 
@@ -187,7 +195,7 @@ li {
   background: url("img/tim.webp") no-repeat;
 }
 
-#tim:hover, #tim:active {
+#tim:hover, #tim:active, #tim:focus {
   background: url("img/timdim.webp") no-repeat;
 }
 
@@ -195,7 +203,7 @@ li {
   background: url("img/devo.webp") no-repeat;
 }
 
-#devo:hover, #devo:active {
+#devo:hover, #devo:active, #tim:focus {
   background: url("img/devodim.webp") no-repeat;
 }
 
@@ -203,7 +211,7 @@ li {
   background: url("img/ben.webp") no-repeat;
 }
 
-#ben:hover, #ben:active {
+#ben:hover, #ben:active, #ben:focus {
   background: url("img/bendim.webp") no-repeat;
 }
 
@@ -211,7 +219,7 @@ li {
   background: url("img/richie.webp") no-repeat;
 }
 
-#richie:hover, #richie:active {
+#richie:hover, #richie:active, #richie:active {
   background: url("img/richiedim.webp") no-repeat;
 }
 
@@ -219,7 +227,7 @@ li {
   background: url("img/dashuan.webp") no-repeat;
 }
 
-#dashuan:hover, #dashuan:active {
+#dashuan:hover, #dashuan:active, #dashuan:focus {
   background: url("img/dashuandim.webp") no-repeat;
 }
 
@@ -227,7 +235,7 @@ li {
   background: url("img/ep1.webp") no-repeat;
 }
 
-#ep1:hover, #ep1:active {
+#ep1:hover, #ep1:active, #ep1:focus {
   background: url("img/ep1dim.webp") no-repeat;
 }
 
@@ -235,7 +243,7 @@ li {
   background: url("img/ep2.webp") no-repeat;
 }
 
-#ep2:hover, #ep2:active {
+#ep2:hover, #ep2:active, #ep2:focus {
   background: url("img/ep2dim.webp") no-repeat;
 }
 
@@ -243,7 +251,7 @@ li {
   background: url("img/ep3.webp") no-repeat;
 }
 
-#ep3:hover, #ep3:active {
+#ep3:hover, #ep3:active, #ep3:focus {
   background: url("img/ep3dim.webp") no-repeat;
 }
 
@@ -251,7 +259,7 @@ li {
   background: url("img/lilacfestmix.webp") no-repeat;
 }
 
-#lilacfestmix:hover, #lilacfestmix:active {
+#lilacfestmix:hover, #lilacfestmix:active, #lilacfestmix:focus {
   background: url("img/lilacfestmixdim.webp") no-repeat;
 }
 
@@ -259,7 +267,7 @@ li {
   background: url("img/ep5.webp") no-repeat;
 }
 
-#ep5:hover, #ep5:active {
+#ep5:hover, #ep5:active, #ep5:focus {
   background: url("img/ep5dim.webp") no-repeat;
 }
 
@@ -267,7 +275,7 @@ li {
   background: url("img/ep4.webp") no-repeat;
 }
 
-#ep4:hover, #ep4:active {
+#ep4:hover, #ep4:active, #ep4:focus {
   background: url("img/ep4dim.webp") no-repeat;
 }
 
@@ -275,7 +283,7 @@ li {
   background: url("img/take2.webp") no-repeat;
 }
 
-#take2:hover, #take2:active {
+#take2:hover, #take2:active, #take2:focus {
   background: url("img/take2dim.webp") no-repeat;
 }
 
@@ -283,16 +291,8 @@ li {
   background: url("img/oldies.webp") no-repeat;
 }
 
-#oldies:hover, #oldies:active {
+#oldies:hover, #oldies:active, #oldies:focus {
   background: url("img/oldiesdim.webp") no-repeat;
-}
-
-
-#ep5:hover #ep5text, #ep5:active #ep5text {
-  background-image: linear-gradient(to left, #c8a2c8,
-    #4b0082, #c8a2c8, #4b0082, #c8a2c8, #4b0082, #c8a2c8);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .smol {
@@ -322,7 +322,7 @@ li {
   color: #00ff00;
 }
 
-.musiclink:hover {
+.musiclink:hover, .musiclink:active, .musiclink:focus {
   color:  #55ff55;
   font-size: 1.05em;
 }
@@ -370,7 +370,7 @@ li {
   border-top: 1px solid white;
 }
 
-.headline:hover {
+.headline:hover, .headline:active, .headline:focus {
   background-color: rgb(40, 40, 40);
 }
 
