@@ -153,8 +153,8 @@ const setHeadlines = function (wrapper) {
 }
 
 // I definitely wrote this by hand, it totally wasn't chatgpt
-const scrambleText = function (element, scrambleDuration = 100, scrambleFrequency = 5000) {
-  const originalText = element.innerText; // Store the original text
+const scrambleText = function (element, scrambleDuration = 100, scrambleFrequency = 5000, texts) {
+  const text = texts[Math.floor(Math.random() * texts.length)]; // Store the original text
 
   // Function to randomly scramble the text
   function getRandomCharacter() {
@@ -164,7 +164,7 @@ const scrambleText = function (element, scrambleDuration = 100, scrambleFrequenc
 
   // Function to scramble text for a short time
   function scramble() {
-    const textArray = originalText.split('');
+    const textArray = text.split('');
     const scrambleInterval = setInterval(() => {
       // Replace random characters in the text
       for (let i = 0; i < textArray.length; i++) {
@@ -178,7 +178,7 @@ const scrambleText = function (element, scrambleDuration = 100, scrambleFrequenc
     // After a brief duration, revert back to original text
     setTimeout(() => {
       clearInterval(scrambleInterval);
-      element.innerText = originalText;
+      element.innerText = texts[Math.floor(Math.random() * texts.length)];
     }, scrambleDuration);
   }
 
@@ -233,6 +233,6 @@ $(document).ready(() => {
     }
   });
 
-  scrambleText(document.getElementById('koalink'), 1000, 2000);
+  scrambleText(document.getElementById('koalink'), 1000, 2000, ['>> i can make you disappear . . .', '>> incoming transmission . . .', '>> NEW SINGLE OUT NOW ! ! !', '>> CLICK HERE . . . ?']);
 
 });
