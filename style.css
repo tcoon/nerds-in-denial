@@ -17,14 +17,14 @@ body {
   width: 35%;
   display: inline-block;
   vertical-align: middle;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 15px;
   border: 2px solid black;
   margin-bottom: 3em;
 }
 
 #bandbio p {
-  font-size: 0.85em;
+  font-size: 0.9em;
   padding: 2.5em;
   text-align: center;
 }
