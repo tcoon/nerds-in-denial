@@ -5,12 +5,50 @@
 
 body {
   margin: 0;
-  background-image: url("img/koa.webp");
-  background-repeat: repeat-y;
-  background-size:  100%;
   color: lightgray;
   text-align:  center;
   font-family: yeet, Verdana, Arial, Tahoma, Serif;
+
+  /* --- Top bars (65%) --- */
+  background:
+  linear-gradient(to right,
+    #C0C0C0 0% 14.285%,  /* white */
+    #C0C000 14.285% 28.57%,  /* yellow */
+    #00C0C0 28.57% 42.855%,  /* cyan */
+    #00C000 42.855% 57.14%,  /* green */
+    #C000C0 57.14% 71.425%,  /* magenta */
+    #C00000 71.425% 85.71%,  /* red */
+    #0000C0 85.71% 100%      /* blue */
+  ) 0 0 / 100% 65vh no-repeat,
+
+  /* --- Middle bars (10%) --- */
+  linear-gradient(to right,
+    #0000C0 0% 14.285%,    /* blue */
+    #000000 14.285% 28.57%,/* black */
+    #C000C0 28.57% 42.855%,/* magenta */
+    #000000 42.855% 57.14%,/* black */
+    #00C0C0 57.14% 71.425%,/* cyan */
+    #000000 71.425% 85.71%,/* black */
+    #C0C0C0 85.71% 100%    /* grey */
+  ) 0 65vh / 100% 10vh no-repeat,
+
+  /* --- Bottom bars (25%) --- */
+  linear-gradient(to right,
+    #00214C 0% 17.86%,    /* dark blue - first 71.43% chunk */
+    #FFFFFF 17.86% 35.72%,/* white - first 71.43% chunk */
+    #32006A 35.72% 53.58%,/* purple - first 71.43% chunk */
+    #090909 53.58% 71.43%,/* near black - first 71.43% chunk */
+    #000000 71.43% 76.19%,/* black - mini */
+    #090909 76.19% 80.95%,/* near black - mini */
+    #1D1D1D 80.95% 85.71%,/* grayish black - mini */
+    #000000 85.71% 100%    /* near black - final 17.86% */
+  ) 0 75vh / 100% 25vh no-repeat;
+
+  background-attachment: fixed;
+}
+
+#bars li {
+  color: #111;
 }
 
 #bandbio {
@@ -52,6 +90,7 @@ body {
   padding-top: 1em;
   padding-bottom: 1em;
   font-size: 36px;
+  color: #111;
 }
 
 #title {
