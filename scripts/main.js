@@ -152,42 +152,6 @@ const setHeadlines = function (wrapper) {
   });
 }
 
-// I definitely wrote this by hand, it totally wasn't chatgpt
-const scrambleText = function (element, scrambleDuration = 100, scrambleFrequency = 5000, texts) {
-  const text = texts[Math.floor(Math.random() * texts.length)]; // Store the original text
-
-  // Function to randomly scramble the text
-  function getRandomCharacter() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:,.<>?';
-    return characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-
-  // Function to scramble text for a short time
-  function scramble() {
-    const textArray = text.split('');
-    const scrambleInterval = setInterval(() => {
-      // Replace random characters in the text
-      for (let i = 0; i < textArray.length; i++) {
-        if (Math.random() < 0.3) { // 30% chance to scramble each character
-          textArray[i] = getRandomCharacter();
-        }
-      }
-      element.innerText = textArray.join('');
-    }, 50);
-
-    // After a brief duration, revert back to original text
-    setTimeout(() => {
-      clearInterval(scrambleInterval);
-      element.innerText = texts[Math.floor(Math.random() * texts.length)];
-    }, scrambleDuration);
-  }
-
-  // Set interval to occasionally scramble the text
-  setInterval(() => {
-    scramble();
-  }, scrambleFrequency);
-}
-
 $(document).ready(() => {
 
   var scrollCount = 0;
@@ -232,7 +196,4 @@ $(document).ready(() => {
       $('#navigationBtn').append('<p><b>Menu&nbsp;&#9660;</b></p>');
     }
   });
-
-  scrambleText(document.getElementById('koalink'), 1000, 2000, ['>> i can make you disappear . . .', '>> incoming transmission . . .', '>> NEW SINGLE OUT NOW ! ! !', '>> CLICK HERE . . . ?']);
-
 });
