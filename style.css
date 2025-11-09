@@ -47,6 +47,12 @@ body {
   background-attachment: fixed;
 }
 
+#barslink {
+   color: white;
+   font-weight: bold;
+   font-family: monospace;
+}
+
 #bars li {
   color: #111;
 }
