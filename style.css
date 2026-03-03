@@ -51,6 +51,7 @@ body {
    color: #0F0;
    font-weight: bold;
    font-family: monospace;
+   font-size: 16px;
 }
 
 #bars li {
@@ -608,4 +609,24 @@ hr {
     margin-right: auto;
     display: block;
   }
+}
+
+#barsalert {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  color: #00FF00;
+  font-family: monospace;
+  font-size: 26px;
+}
+
+.blink {
+  font-family: monospace;
+  animation: blinkMe 2s linear infinite;
+}
+
+@keyframes blinkMe {
+    0% { opacity: .5; } /* Text is invisible at 0% and 100% */
+    50% { opacity: 1; } /* Text is visible at 50% */
+    100% { opacity: .5; }
 }
