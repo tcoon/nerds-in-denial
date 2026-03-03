@@ -94,7 +94,8 @@ const rareMessage = function (rareCount) {
       return "I guess we'll put the copyright down here somewhere";
       break;
     case 4:
-      return "&#169; Nerds in Denial 2026. Email us: nerdsindenial at gmail";
+      let year = new Date().getFullYear();
+      return "&#169; Nerds in Denial  " + year + ". Email us: nerdsindenial at gmail";
       break;
     case 5:
       return "tim wuz here 👉😎👉";
