@@ -509,39 +509,6 @@ li {
   font-family: yeet, Verdana, Arial, Tahoma, Serif;
 }
 
-#nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: gray;
-  z-index: 9001;
-  opacity: 75%;
-}
-
-#nav a {
-
-}
-
-#nav p {
-  padding-left: 1em;
-  padding-right: 1em;
-  border: 1px solid white;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: white;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-}
-
-#nav p:hover {
-  background-color: black;
-  cursor: pointer;
-}
-
-#nav p:active {
-  background-color: red;
-}
-
 .location {
   display: none;
 }
