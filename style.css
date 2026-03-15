@@ -590,6 +590,7 @@ hr {
 .blink {
   font-family: monospace;
   animation: blinkMe 2s linear infinite;
+  color: #00FF00;
 }
 
 @keyframes blinkMe {
