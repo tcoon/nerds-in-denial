@@ -368,6 +368,14 @@ li {
   background: url("img/ep5dim.webp") no-repeat;
 }
 
+#barsalbum {
+  background: url("img/bars.webp") no-repeat;
+}
+
+#barsalbum:hover, #barsalbum:active, #barsalbum:focus {
+  background: url("img/barsdim.webp") no-repeat;
+}
+
 #koa {
   background: url("img/koasmall.webp") no-repeat;
 }
@@ -544,6 +552,15 @@ hr {
   width: 50%
 }
 
+#barsalert {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  color: #00FF00;
+  font-family: monospace;
+  font-size: 48px;
+}
+
 @media only screen and (max-width: 823px) {
 
 
@@ -576,15 +593,10 @@ hr {
     margin-right: auto;
     display: block;
   }
-}
 
-#barsalert {
-  width: 100%;
-  background-color: black;
-  text-align: center;
-  color: #00FF00;
-  font-family: monospace;
-  font-size: 26px;
+  #barsalert {
+    font-size: 32px;
+  }
 }
 
 .blink {
